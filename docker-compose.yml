@@ -4,12 +4,12 @@ services:
     image: aceberg/exercisediary
     restart: unless-stopped
     ports:
-    - 8851:8851
+    - 8880:8880
     volumes:
     - ~/.dockerdata/ExerciseDiary:/data/ExerciseDiary
     environment:
       TZ: Asia/Novosibirsk    # required, default: ""
       HOST: "0.0.0.0"         # optional, default: 0.0.0.0
-      PORT: "8851"            # optional, default: 8851
+      PORT: "8880"            # optional, default: 8880
       THEME: "grass"          # optional, default: grass
       COLOR: "light"          # optional, default: light
