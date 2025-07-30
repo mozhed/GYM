@@ -11,8 +11,8 @@ services:
     image: aceberg/exercisediary
     restart: unless-stopped
     ports:
-    - 8851:8851
-    command: "-n http://YOUR_IP:8850" # Put your server IP or DNS name here
+    - 8880:8880
+    command: "-n http://localhost:8881" # Put your server IP or DNS name here
     depends_on:
       - node-bootstrap
     volumes:
@@ -20,6 +20,6 @@ services:
     environment:
       TZ: Asia/Novosibirsk    # required, default ""
       HOST: "0.0.0.0"         # optional, default: 0.0.0.0
-      PORT: "8851"            # optional, default: 8851
+      PORT: "8880"            # optional, default: 8851
       THEME: "grass"          # optional, default: grass
       COLOR: "light"          # optional, default: light
